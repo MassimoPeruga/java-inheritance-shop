@@ -37,7 +37,7 @@ public class Smartphone extends Product {
     @Override
     public BigDecimal getDiscountedPrice() {
         if (this.memory < 32) {
-            return super.getPrice().multiply(BigDecimal.valueOf(0.95)).setScale(2, RoundingMode.HALF_UP);
+            return super.getFullPrice().multiply(BigDecimal.valueOf(0.95)).setScale(2, RoundingMode.HALF_EVEN);
         } else {
             return super.getDiscountedPrice();
         }

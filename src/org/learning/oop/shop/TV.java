@@ -37,7 +37,7 @@ public class TV extends Product {
     @Override
     public BigDecimal getDiscountedPrice() {
         if (!this.isSmart) {
-            return super.getPrice().multiply(BigDecimal.valueOf(0.90)).setScale(2, RoundingMode.HALF_UP);
+            return super.getFullPrice().multiply(BigDecimal.valueOf(0.90)).setScale(2, RoundingMode.HALF_EVEN);
         } else {
             return super.getDiscountedPrice();
         }
